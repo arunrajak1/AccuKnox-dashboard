@@ -16,7 +16,7 @@ const DonutMultiColor = () => {
     { name: "Passed", value: 7253 },
   ];
 
-  const COLORS = ["#C23632", "#FAD732", "#C8CDDC", "#19A55A"];
+  cons t COLORS = ["#C23632", "#FAD732", "#C8CDDC", "#19A55A"];
 
   const totalValue = data.reduce((a, b) => a + b.value, 0);
 
