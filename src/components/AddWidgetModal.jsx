@@ -63,7 +63,6 @@ const AddWidgetModal = ({ closeModal, existingWidgets = [] }) => {
       const newSelectedWidgets = new Set(prev);
       if (newSelectedWidgets.has(widgetId)) {
         newSelectedWidgets.delete(widgetId);
-        // Schedule a dispatch for removal after the state is updated
         setTimeout(() => {
           dispatch(removeWidget({ categoryId: selectedCategoryId, widgetId }));
         }, 0);
@@ -72,7 +71,6 @@ const AddWidgetModal = ({ closeModal, existingWidgets = [] }) => {
         const widget = selectedCategory.widgets.find(w => w.id === widgetId);
         if (widget) {
           const position = selectedCategory.widgets.findIndex(w => w.id === widgetId);
-          // Schedule a dispatch for addition after the state is updated
           setTimeout(() => {
             dispatch(addWidget({
               categoryId: selectedCategoryId,
@@ -80,7 +78,7 @@ const AddWidgetModal = ({ closeModal, existingWidgets = [] }) => {
               name: widget.name,
               text: widget.text,
               chartType: widget.chartType,
-              position, // Pass the position where it was removed
+              position, 
             }));
           }, 0);
         }

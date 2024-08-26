@@ -59,7 +59,6 @@ const DonutMultiColor = () => {
         </ResponsiveContainer>
       </div>
 
-      {/* Side Text with Square Bullet Points */}
       <div className="w-full lg:w-auto text-xs font-sans grid grid-cols-2 gap-2 sm:grid-cols-2 md:grid-cols-2 lg:flex lg:flex-col lg:items-start lg:justify-center lg:space-y-2">
         {data.map((entry, index) => (
           <div key={index} className="flex items-center justify-start sm:justify-start md:justify-start lg:justify-center">

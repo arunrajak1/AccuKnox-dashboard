@@ -8,7 +8,6 @@ const MultiColorProgressBar = () => {
     { name: 'Low', value: 25, color: '#FF5733' }, 
   ];
 
-  // Calculate total value
   const total = data.reduce((acc, segment) => acc + segment.value, 0);
 
   return (

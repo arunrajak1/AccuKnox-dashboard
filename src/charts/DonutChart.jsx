@@ -9,7 +9,6 @@ const DonutChart = () => {
 
   const COLORS = ['#5578FF', '#E1EBFF'];
 
-  // Count the number of objects
   const totalCount = data.length;
 
   return (
@@ -47,7 +46,6 @@ const DonutChart = () => {
         </ResponsiveContainer>
       </div>
 
-      {/* Side Text with Square Bullet Points */}
       <div className="w-full lg:w-auto text-xs font-sans grid grid-cols-2 gap-2 sm:grid-cols-2 md:grid-row-2 lg:flex lg:flex-col lg:items-start lg:justify-center lg:space-y-2">
         {data.map((entry, index) => (
           <div key={index} className="flex items-center justify-start sm:justify-start md:justify-center lg:justify-start">

@@ -15,23 +15,20 @@ const dashboardSlice = createSlice({
       const category = state.categories.find(cat => cat.id === categoryId);
 
       if (widgetId) {
-        // Find and update existing widget
         const existingWidget = category.widgets.find(widget => widget.id === widgetId);
         if (existingWidget) {
           existingWidget.name = name;
           existingWidget.text = text;
           existingWidget.chartType = chartType || existingWidget.chartType;
         } else {
-          // Add new widget at the specified position
           const newWidget = { id: widgetId, name, text, chartType };
           if (position !== undefined) {
-            category.widgets.splice(position, 0, newWidget); // Insert at specific position
+            category.widgets.splice(position, 0, newWidget); 
           } else {
-            category.widgets.push(newWidget); // If no position is specified, append at the end
+            category.widgets.push(newWidget);
           }
         }
       } else {
-        // Create a new widget if no widgetId is provided
         const newWidget = { id: Date.now().toString(), name, text, chartType: chartType || "DefaultChartType" };
         category.widgets.push(newWidget);
       }
@@ -42,7 +39,7 @@ const dashboardSlice = createSlice({
       const widgetIndex = category.widgets.findIndex(widget => widget.id === widgetId);
       
       if (widgetIndex > -1) {
-        category.widgets.splice(widgetIndex, 1); // Remove the widget from its position
+        category.widgets.splice(widgetIndex, 1); 
       }
     },
   },
