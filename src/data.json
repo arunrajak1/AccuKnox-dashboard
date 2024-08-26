@@ -1,7 +1,7 @@
 {
   "categories": [
     {
-      "id": "cspm",
+      "id": "CSPM",
       "name": "CSPM Executive Dashboard",
       "widgets": [
         {
@@ -19,7 +19,7 @@
       ]
     },
     {
-      "id": "cwpp",
+      "id": "CWPP",
       "name": "CWPP Dashboard :",
       "widgets": [
         {
@@ -37,7 +37,7 @@
       ]
     },
     {
-      "id": "registry",
+      "id": "Registry",
       "name": "Registry Scan ",
       "widgets": [
         {
