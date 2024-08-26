@@ -42,6 +42,14 @@ const dashboardSlice = createSlice({
         category.widgets.splice(widgetIndex, 1); 
       }
     },
+    searchWidgets: (state, action) => {
+      const searchTerm = action.payload.toLowerCase();
+      state.categories.forEach(category => {
+        category.filteredWidgets = category.widgets.filter(widget =>
+          widget.name.toLowerCase().includes(searchTerm)
+        );
+      });
+    },
   },
 });
 
